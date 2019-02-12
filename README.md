@@ -2,4 +2,4 @@ Sample Login Page based off of Angular framework with PHP backend querying a MyS
 
 Host Server.php on XAMPP/WAMP. Place the Server.php in XAMPP's htdocs. If you get CORS error, edit Apache config to include CrossOrigin requests.
 
-Run npm install from the angular project folder. And then serve using `ng serve`
+Run `npm install` from the angular project folder. And then serve using `ng serve`
