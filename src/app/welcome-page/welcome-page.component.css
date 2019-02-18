@@ -1,0 +1,290 @@
+
+
+body{
+    position:relative}
+    
+.overlay,.sideMenu{
+    position:fixed;
+    bottom:0}
+
+    .overlay{
+        top:0;
+        left:-100%;
+        right:100%;
+        margin:auto;
+    background-color:rgba(0,0,0,.5);
+    z-index:998;
+   
+    transition: all ease 0.1s}.overlay.open{left:0;right:0}
+
+
+.sidebarNavigation{margin-bottom:0;
+    z-index:999;
+    justify-content:flex-start
+}
+
+
+.sidebarNavigation .leftNavbarToggler{
+    margin-right:10px;
+    order:-1
+}
+
+.sideMenu{
+    left:-100%;
+    top:52px;
+    transition:all ease 1.2s;
+    overflow:hidden;
+    width:100%;
+    z-index:999;
+    max-width:80%;
+    margin-bottom:0;
+    padding:1rem}
+
+
+.sideMenu.open{
+    left:0;
+    display:block;
+    overflow-y:auto}
+
+.sideMenu ul{margin:0;padding:0 15px}
+
+.collapsing {
+    -webkit-transition: height 0.01s;
+    -moz-transition: height 0.01s;
+    -ms-transition: height 0.01s;
+    -o-transition: height 0.01s;
+    transition: height 0.01s;
+  }
+  .navbar-brand{
+    font-family: Product Sans;
+    font-size: 35px;
+}
+
+.image--cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 6px;
+  
+    object-fit: cover;
+    object-position: center right;
+  }
+
+.card{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+.icon-font{
+    font-size: 1.6em;
+}
+.icon-background {
+
+    color: rgba(0, 0, 0, 0.18);
+}
+
+.temperature{
+    background: linear-gradient(45deg, #be285a 0%, #a11e4a 100%);
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.temperature::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 20px 5px #be285a80;
+    transition: opacity 0.30s ease-in-out;
+  }
+  
+
+.temperature:hover{
+    transform: scale(1.05, 1.05);
+   
+}
+.temperature:hover::after {
+    opacity: 1;
+  }
+
+.humidity{
+    background: linear-gradient(45deg, #02d11e 0%, #117c3a 100%);
+    transition: all 0.3s ease-in-out;
+    color: #FFFFFF;
+}
+
+
+.humidity::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 20px 0 #117c3a80;
+    transition: opacity 0.30s ease-in-out;
+  }
+  
+
+.humidity:hover{
+    transform: scale(1.05, 1.05);
+   
+}
+.humidity:hover::after {
+    opacity: 1;
+  }
+
+
+
+.sMoisture{
+    background: linear-gradient(45deg, #3a0308 0%, #ce6c11 100%);
+   
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.sMoisture::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 20px 0 #3a030880;
+    transition: opacity 0.30s ease-in-out;
+  }
+
+.sMoisture:hover{
+    transform: scale(1.05, 1.05);
+   
+}
+.sMoisture:hover::after {
+    opacity: 1;
+  }
+
+
+.waterLevel{
+    background: linear-gradient(45deg, #0288d1 0%, #26c6da 100%);
+    
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.waterLevel::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 20px 0 #0288d180;
+    transition: opacity 0.30s ease-in-out;
+  }
+.waterLevel:hover{
+    transform: scale(1.05, 1.05);
+   
+}
+.waterLevel:hover::after {
+    opacity: 1;
+  }
+
+
+
+.sunlight{
+    background: linear-gradient(45deg, #d1c302 0%, #da7d26 100%);
+   
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.sunlight:hover{
+    transform: scale(1.05, 1.05);
+   
+}
+.sunlight:hover::after {
+    opacity: 1;
+  }
+
+  
+.sunlight::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 6px 20px 0 #da7d2680;
+    transition: opacity 0.30s ease-in-out;
+  }
+  /* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

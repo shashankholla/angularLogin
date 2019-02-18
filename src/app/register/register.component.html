@@ -1,0 +1,36 @@
+
+<div class="card">
+    <h1 class="text-center">Register</h1>
+<form #registerForm="ngForm" (ngSubmit)="process(registerForm)">
+    <div class="form-class" >
+        <label for="name">Full Name</label>
+        <input ngModel required minlength="3" name="name" #name="ngModel"  id="name" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="!username.valid && username.touched">Name is Required</div>
+      </div>
+  <div class="form-class" >
+    <label for="userName">Email</label>
+    <input ngModel required minlength="3" name="email" #email="ngModel"  id="email" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="!username.valid && username.touched">Email is Required</div>
+  </div>
+  <div class="form-class" >
+    <label for="userName">Username</label>
+    <div class="alert alert-danger" *ngIf="usernameExists">Username exists. Try another one, or login with the existing username</div>
+    <input ngModel required minlength="3" name="username" #username="ngModel"  id="username" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="!username.valid && username.touched">Username is Required</div>
+  </div>
+  <div class="form-class">
+      <label for="password">Password</label>
+      <input ngModel required name="password" #password="ngModel"  id="password" type="password" class="form-control">
+      <div class="alert alert-danger" *ngIf="!password.valid && password.touched">Password is Required</div>
+  </div>
+  <div class="form-class">
+    <label for="cpassword">Confirm Password</label>
+    <input ngModel required name="cpassword" #cpassword="ngModel"  id="cpassword" type="password" class="form-control">
+    <div class="alert alert-danger" *ngIf="password.value != cpassword.value">Passwords don't match</div>
+</div>
+  <button class="btn btn-primary" style="margin:10px;" type="submit" [disabled] = "registerForm.invalid">Register</button>
+  <div class="alert alert-success" *ngIf="accountCreated">Account Created. Proceed to Login Page.</div>
+  <a routerLink="/"> <button class="btn btn-primary" style="margin:10px;" id="login" >Login</button> </a>
+
+</form>
+</div>

@@ -1,3 +1,9 @@
+<div class="row">
+  <div class=" col-md-6 col-xs-12 col-sm-10 col-sm-offset-1 col-md-offset-2">
+
+  <div class="card">
+      <h1 class="text-center">Login</h1>
+      <div class="card-body">
 <form #loginForm="ngForm" (ngSubmit)="process(loginForm)">
   <div class="form-class" >
     <label for="userName">Username</label>
@@ -10,6 +16,9 @@
       <div class="alert alert-danger" *ngIf="!password.valid && password.touched">Password is Required</div>
   </div>
   <button class="btn btn-primary" style="margin:10px;" type="submit">Login</button>
+  <a routerLink="/register"> <button class="btn btn-primary" style="margin:10px;" id="register">Register</button> </a>
+  <div class="alert alert-danger" *ngIf="!validUser">Username/Password is incorrect.</div>
 
-
-</form>
+</form></div>
+</div>
+</div></div>

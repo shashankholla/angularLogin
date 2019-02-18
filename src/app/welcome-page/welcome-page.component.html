@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+      
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#F9F9F9" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  
+  
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+  
+
+
+</head>
+
+<style>
+
+</style>
+
+
+
+
+
+
+<body style="background-color: #FFFFFF" >
+   
+    
+  <div class="container" style="padding-top: 25px">
+  
+  
+
+  
+
+
+  <div class="row">
+        <div class="col-sm-6 col-xs-1" >
+                <div class="card " style="padding: 1px">
+                    <div class="row">
+                    <div class="col-sm-6"><div class="card-body text-center">  <img src="https://i.kinja-img.com/gawker-media/image/upload/gd8ljenaeahpn0wslmlz.jpg" class="image--cover"></div></div>
+                    <div class="col-sm-6" style="align-items: center; padding: 25px">
+                    <h2 class="card-title" >{{mName}}'s </h2>
+                    <h5 class="card-subtitle mb-2">Farm</h5>
+                    <p id="Time">Last Updated: {{lastUpdate}}</p></div>
+                    
+                </div>
+            </div>
+            </div>
+      <div class="col-sm-3 col-xs-1" >
+          <div class="card temperature" >
+              <div class="card-body text-center"> 
+                <span class="fa-stack fa-2x icon-font">
+                  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                  <i class="fa fa-thermometer-empty fa-stack-1x"></i>
+                </span>
+                  <h5 class="card-title">
+                     
+                      Temperature</h5>
+                    <div style="min-height: 50px"><h1 id="currentTemp">{{temp}} C</h1></div>
+                  <a href="tables/tempData.html" class="card-link">Data</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-3 col-xs-1">
+          <div class="card humidity">
+              <div class="card-body text-center">
+                  <span class="fa-stack fa-2x icon-font">
+                      <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                      <i class="fa fa-tint fa-stack-1x"></i>
+                    </span>
+                  <h5 class="card-title">Humidity</h5>
+                  <div style="min-height: 50px"><h1 id="currentHumidity">{{humidity}}</h1></div>
+                  <a href="tables/humidityData.html" class="card-link">Data</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-3 col-xs-1">
+          <div class="card sMoisture">
+              <div class="card-body text-center">
+                  <span class="fa-stack fa-2x icon-font">
+                      <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                      <i class="fa fa-leaf fa-stack-1x"></i>
+                    </span>
+                  <h5 class="card-title">Soil Moisture</h5>
+                  <div style="min-height: 50px"><h1 id="currentSoilMoisture">{{soilMoisture}}</h1></div>
+                  <a href="tables/moistureData.html" class="card-link">Data</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-3 col-xs-1">
+          <div class="card waterLevel">
+              <div class="card-body text-center">
+                  <span class="fa-stack fa-2x icon-font">
+                      <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                      <i class="fa fa-level-up fa-stack-1x"></i>
+                    </span>
+                  <h5 class="card-title">Water Level</h5>
+                 <h1 id="currentWaterLevel">{{waterLevel}}</h1>
+                  <a href="tables/waterLevelData.html" class="card-link">Data</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-3 col-xs-1">
+          <div class="card sunlight">
+              <div class="card-body text-center">
+                  <span class="fa-stack fa-2x icon-font">
+                      <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                      <i class="fa fa-sun-o fa-stack-1x fa-spin"></i>
+                    </span>
+                  <h5 class="card-title">Sunlight</h5>
+                  <h1 id="currentSunlight">Sunny</h1>
+                  <a href="tables/tempData.html" class="card-link"> <br>    </a>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-3 col-xs-1">
+        <div class="card sunlight">
+            <div class="card-body text-center">
+                <span class="fa-stack fa-2x icon-font">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-cog fa-spin fa-stack-1x"></i>
+                  </span>
+                <h5 class="card-title">Motor</h5>
+                        <!-- Rounded switch -->
+                      
+                         
+                <a href="#" class="card-link">Data</a>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+
+
+</div>
+
+
+ 
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  
+  
+  
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ 
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

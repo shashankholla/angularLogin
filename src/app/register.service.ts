@@ -4,15 +4,12 @@ import { Http } from '@angular/http';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
-
-
-
+export class RegisterService {
   url = "http://localhost/server.php";
   constructor(private http: Http) { }
- 
 
-  login(loginData)
+
+  register(loginData)
   {
     return this.http.post(this.url, loginData);
   }

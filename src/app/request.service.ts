@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class RequestService {
 
 
 
@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private http: Http) { }
  
 
-  login(loginData)
+  requestData(loginData)
   {
     return this.http.post(this.url, loginData);
   }

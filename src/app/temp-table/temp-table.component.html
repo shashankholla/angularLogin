@@ -1,0 +1,24 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4">Welcome to farm {{selectedFarm.name}}</h1>
+    <p class="lead">Please view the latest developments in your farm below</p>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Humidity</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let values of selectedFarm.temperatureList;let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{selectedFarm.temperatureList[i]}}&#8451;</td>
+            <td>{{selectedFarm.humidityList[i]}}%</td>
+          </tr>
+    </tbody>
+  </table>
+</div>
